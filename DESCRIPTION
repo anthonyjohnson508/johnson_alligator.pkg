@@ -1,0 +1,23 @@
+Package: johnson.pkg
+Title: An R package for processing fake alligator data
+Version: 0.1
+Authors@R: c(
+  person(given = "Anthony",
+         family = "Johnson", 
+         role = c("cre", "aut"),
+         email = "anthony.johnson-5@selu.edu")
+         )
+Description: An R package that is useful when working with a fake alligator dataset and you want to manipulate the orginal data. This function will help to reclassify column data by spliting up categorical data into addional categories. This function creates a linear regression and an ANOVA between animal classifications and HL ratios, creates a box plot, performs spatial analysis using k-means clustering, and exports the altered dataset to a new .csv.
+License: MIT + file LICENSE
+Depends: 
+  R (>= 2.10),
+  ggplot2
+Imports:
+  tidyverse, ggplot2
+RoxygenNote: 7.1.1
+Suggests:
+  knitr,
+  rmarkdown
+vignetteBuilder: knitr
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)

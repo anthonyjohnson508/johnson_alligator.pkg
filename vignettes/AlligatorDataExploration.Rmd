@@ -1,0 +1,16 @@
+---
+title: "AlligatorDataExploration"
+author: "Anthony Johnson"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+This R package is useful for data exploration of a fake alligator data set. In this package there are ways to create new columns in the original data for further analysis. Additionally, this function generates k means clusters to explore and compare spatial differences. 
+
+
+
