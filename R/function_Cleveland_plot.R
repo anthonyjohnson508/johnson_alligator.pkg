@@ -1,6 +1,6 @@
-#' This function creates a Cleveland plot
+#' This function creates a Cleveland plot.
 #'
-#' This plot compares the leukocyte:length ratio by animal classification
+#' This plot compares the leukocyte:length ratio by animal classification.
 #" 
 #'
 #'@param data the data set being used, should be .csv.
@@ -14,6 +14,8 @@
 
 
 plot_LLRatio_by_class <- function(data, x_axis, y_axis, binwidth) {
+  custom_order <- c("Adult", "Subadult", "Juvenile", "Hatchling")
+  data[[x_axis]] <- factor(data[[x_axis]], levels = custom_order)
   plot_arguments <- ggplot(data, aes_string(x = x_axis, y = y_axis, fill = x_axis)) +
     geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 0.5, position = "jitter", binwidth = binwidth) +
     ylab(y_axis) +
@@ -22,4 +24,11 @@ plot_LLRatio_by_class <- function(data, x_axis, y_axis, binwidth) {
   
   return(plot_arguments)
 }
+
+
+
+##run and print
+#cleveland_plot <- plot_LLRatio_by_class(alligators_reclassify, "NewClass", "L_L_Ratio", 0.0050)
+#print(cleveland_plot)
+
 

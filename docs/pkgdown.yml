@@ -2,6 +2,6 @@ pandoc: 3.1.1
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
-  AlligatorDataExploration: AlligatorDataExploration.html
-last_built: 2023-10-31T19:23Z
+  AlligatorDataExplorationTutorial: AlligatorDataExplorationTutorial.html
+last_built: 2023-11-14T20:40Z
 

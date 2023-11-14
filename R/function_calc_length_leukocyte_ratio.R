@@ -19,7 +19,7 @@ calc_length_leukocyte_ratio <- function(data, column_a, column_b) {
 }
 
 
-
-#alligators <- calc_length_leukocyte_ratio(alligators, "H_L_Ratio", "TL")
-
+##Run and test function
+#alligators_reclassify <- calc_length_leukocyte_ratio(alligators_reclassify, "H_L_Ratio", "TL")
+#head(alligators_reclassify)
 
