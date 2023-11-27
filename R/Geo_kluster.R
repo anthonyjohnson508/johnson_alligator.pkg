@@ -1,7 +1,7 @@
 #' This function uses K-means cluster to create cluster groups based on geographic location.
 #'
 #' This function adds four new columns to your original data set.
-#" Four new columns = cluster which the animal belongs to, the number of animals in the group, the cluster groups latitude at the center, and the cluster groups longitude at the center.
+#" Four new columns = cluster which the animal belongs to (cluster), the number of animals in the group (Gators_Per_Cluster), the cluster groups latitude at the center (center_lat), and the cluster groups longitude at the center (center_long).
 #' These new columns can be utilized to conducted additional spatial analysis.
 #'
 #'@param data the data set being used, should be .csv, and should have separate columns with latitude and longitude data.
@@ -14,7 +14,14 @@
 #'
 
 
+#library(dplyr)
+
 cluster_data <- function(data, lat_column, long_column, k) {
+  
+  if (any(grepl("-", data[[lat_column]]))) {
+    warning("You may have mixed your lat and long columns. '-' symbols found in the latitude column.")
+  }
+  
   coordinates <- data[c(lat_column, long_column)]
   kmeans_result <- kmeans(coordinates, centers = k)
   data$cluster <- as.character(kmeans_result$cluster)
@@ -33,5 +40,6 @@ cluster_data <- function(data, lat_column, long_column, k) {
 
 
 ##test and print
-#alligators_reclassify <- cluster_data(alligators_reclassify, lat_column = "Lat", long_column = "Long", k = 10)
+#alligators_reclassify <- cluster_data(alligators_reclassify, lat_column = "Lat", long_column = "Long", k = 10) #works
+#Checkifstatement<- cluster_data(alligators_reclassify, lat_column = "Long", long_column = "Lat", k = 10) #busted, purposefully switched lat and long
 #print(alligators_reclassify)

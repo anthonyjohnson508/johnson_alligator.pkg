@@ -1,0 +1,143 @@
+* using log directory ‘/cloud/project/johnson.pkg/johnson.pkg.Rcheck’
+* using R version 4.3.1 (2023-06-16)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* R was compiled by
+    gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+    GNU Fortran (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+* running under: Ubuntu 20.04.6 LTS
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘johnson.pkg/DESCRIPTION’ ... OK
+* this is package ‘johnson.pkg’ version ‘0.1’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... WARNING
+Found the following file with a non-portable file name:
+  docs/reference/figures/PXL_20230823_011743618 (1).jpg
+These are not fully portable file names.
+See section ‘Package structure’ in the ‘Writing R Extensions’ manual.
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘johnson.pkg’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... NOTE
+Package listed in more than one of Depends, Imports, Suggests, Enhances:
+  ‘ggplot2’
+A package should be listed in only one of these fields.
+* checking top-level files ... NOTE
+Non-standard files/directories found at top level:
+  ‘Data’ ‘README.html’ ‘docs’
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... NOTE
+Namespaces in Imports field not imported from:
+  ‘ggplot2’ ‘tidyverse’
+  All declared Imports should be used.
+Package in Depends field not imported from: ‘ggplot2’
+  These packages need to be imported from (in the NAMESPACE file)
+  for when this namespace is loaded but not attached.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+ANOVA_HL_Class: no visible global function definition for ‘aov’
+cluster_data: no visible global function definition for ‘kmeans’
+cluster_data: no visible global function definition for ‘%>%’
+cluster_data: no visible global function definition for ‘group_by’
+cluster_data: no visible binding for global variable ‘cluster’
+cluster_data: no visible global function definition for ‘summarise’
+cluster_data: no visible global function definition for ‘n_distinct’
+cluster_data: no visible binding for global variable ‘Unique_ID’
+cluster_data: no visible binding for global variable ‘.data’
+cluster_data: no visible global function definition for ‘left_join’
+cluster_data: no visible binding for global variable ‘.’
+plot_LLRatio_by_class: no visible global function definition for
+  ‘ggplot’
+plot_LLRatio_by_class: no visible global function definition for
+  ‘aes_string’
+plot_LLRatio_by_class: no visible global function definition for
+  ‘geom_dotplot’
+plot_LLRatio_by_class: no visible global function definition for ‘ylab’
+plot_LLRatio_by_class: no visible global function definition for ‘xlab’
+plot_LLRatio_by_class: no visible global function definition for
+  ‘ggtitle’
+plot_box_by_cluster: no visible global function definition for ‘ggplot’
+plot_box_by_cluster: no visible global function definition for
+  ‘aes_string’
+plot_box_by_cluster: no visible global function definition for
+  ‘geom_boxplot’
+plot_box_by_cluster: no visible global function definition for
+  ‘geom_jitter’
+plot_box_by_cluster: no visible global function definition for ‘aes’
+plot_box_by_cluster: no visible binding for global variable ‘cluster’
+plot_box_by_cluster: no visible global function definition for ‘ylab’
+plot_box_by_cluster: no visible global function definition for ‘xlab’
+plot_box_by_cluster: no visible global function definition for
+  ‘ggtitle’
+plot_box_by_cluster: no visible global function definition for
+  ‘theme_classic’
+plot_box_by_cluster: no visible global function definition for ‘theme’
+plot_box_by_cluster: no visible global function definition for
+  ‘element_blank’
+plot_box_by_cluster: no visible global function definition for
+  ‘scale_color_discrete’
+reclassify: no visible global function definition for ‘%>%’
+reclassify: no visible global function definition for ‘mutate’
+reclassify: no visible global function definition for ‘:=’
+reclassify: no visible binding for global variable ‘NewClass’
+reclassify: no visible global function definition for ‘case_when’
+Undefined global functions or variables:
+  %>% . .data := NewClass Unique_ID aes aes_string aov case_when
+  cluster element_blank geom_boxplot geom_dotplot geom_jitter ggplot
+  ggtitle group_by kmeans left_join mutate n_distinct
+  scale_color_discrete summarise theme theme_classic xlab ylab
+Consider adding
+  importFrom("stats", "aov", "kmeans")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in documentation object 'cluster_data'
+  ‘k’
+Documented arguments not in \usage in documentation object 'cluster_data':
+  ‘K’
+
+Documented arguments not in \usage in documentation object 'reclassify':
+  ‘new_column’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking files in ‘vignettes’ ... WARNING
+Files in the 'vignettes' directory but no files in 'inst/doc':
+  ‘AlligatorDataExplorationTutorial.Rmd’
+Package has no Sweave vignette sources and no VignetteBuilder field.
+* checking examples ... NONE
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 3 WARNINGs, 4 NOTEs

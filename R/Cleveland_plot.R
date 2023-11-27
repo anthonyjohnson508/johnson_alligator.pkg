@@ -13,9 +13,22 @@
 #'
 
 
+
 plot_LLRatio_by_class <- function(data, x_axis, y_axis, binwidth) {
+  
+  if (!is.numeric(data[[y_axis]])) {
+    stop("Error: Leukocyte/Length Ratio data must be numeric.")
+  }
+  
+  if (!is.character(data[[x_axis]])) {
+    stop("Error: X-axis variable must be a character.")
+  } else {
+    print("Both x and y-axis requirements were met.")
+  }
+  
   custom_order <- c("Adult", "Subadult", "Juvenile", "Hatchling")
   data[[x_axis]] <- factor(data[[x_axis]], levels = custom_order)
+  
   plot_arguments <- ggplot(data, aes_string(x = x_axis, y = y_axis, fill = x_axis)) +
     geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 0.5, position = "jitter", binwidth = binwidth) +
     ylab(y_axis) +
@@ -24,7 +37,6 @@ plot_LLRatio_by_class <- function(data, x_axis, y_axis, binwidth) {
   
   return(plot_arguments)
 }
-
 
 
 ##run and print

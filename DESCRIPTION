@@ -14,7 +14,7 @@ Depends:
   ggplot2
 Imports:
   tidyverse, ggplot2
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
 Suggests:
   knitr,
   rmarkdown

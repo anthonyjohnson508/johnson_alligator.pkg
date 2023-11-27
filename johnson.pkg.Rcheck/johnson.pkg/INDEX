@@ -1,0 +1,11 @@
+ANOVA_HL_Class          This function is used to run an ANOVA.
+calc_length_leukocyte_ratio
+                        This function will be used to calculate the
+                        length to leukocyte ratio.
+cluster_data            This function uses K-means cluster to create
+                        cluster groups based on geographic location.
+plot_LLRatio_by_class   This function creates a Cleveland plot.
+plot_box_by_cluster     This function plots H/L ratios by cluster group
+reclassify              This function cleans the data by making a
+                        correction to the alligator size
+                        classification.

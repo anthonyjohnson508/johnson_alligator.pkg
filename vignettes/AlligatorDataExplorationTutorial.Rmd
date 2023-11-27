@@ -13,4 +13,22 @@ knitr::opts_chunk$set(echo = TRUE)
 This R package is useful for data exploration of a fake alligator data set. In this package there are ways to create new columns in the original data for further analysis. Additionally, this function generates k means clusters to explore and compare spatial differences. 
 
 
+```{r, eval=FALSE}
+#install.packages("googlesheets4)
+library(googlesheets4)
+googlesheets4::gs4_deauth()
+alligators <- read_sheet("https://docs.google.com/spreadsheets/d/1hNHAhO4OhXzpw6LG0WN_AZxaEUiyDhairunCXgpVLqM/edit?usp=sharing")
+```
+
+
+
+
+```{r}
+#Install the package from git hub
+
+devtools::install_github("anthonyjohnson508/johnson_alligator.pkg")
+
+
+```
+
 
