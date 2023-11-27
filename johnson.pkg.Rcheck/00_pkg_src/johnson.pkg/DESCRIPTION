@@ -17,6 +17,6 @@ vignetteBuilder: knitr
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 NeedsCompilation: no
-Packaged: 2023-11-23 02:57:06 UTC; r2159931
+Packaged: 2023-11-27 23:52:33 UTC; r2159931
 Author: Anthony Johnson [cre, aut]
 Maintainer: Anthony Johnson <anthony.johnson-5@selu.edu>

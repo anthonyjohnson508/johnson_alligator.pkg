@@ -1,4 +1,4 @@
-# johnson_alligator.pkg
+# johnson.pkg
 
 ## An R package for processing fake alligator data
 

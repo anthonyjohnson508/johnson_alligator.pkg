@@ -1,6 +1,6 @@
-ANOVA_HL_Class	ANOVA_HL_Class
-calc_length_leukocyte_ratio	calc_length_leukocyte_ratio
-cluster_data	cluster_data
-plot_box_by_cluster	plot_box_by_cluster
-plot_LLRatio_by_class	plot_LLRatio_by_class
+aov_HLclass	aov_HLclass
+calc_LL_ratio	calc_LL_ratio
+Cleveland_plot	Cleveland_plot
+clusterbox	clusterbox
+Geo_kluster	Geo_kluster
 reclassify	reclassify

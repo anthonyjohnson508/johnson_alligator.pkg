@@ -4,7 +4,6 @@
 
 
 
-
 ## Introduction
 This R package was designed to meet the requirements for the GBIO 508 course at Southeastern Louisiana University. It is a useful package if you have a fake alligator data set that you would like to manipulate and analyze. Although you are unlikely to have a comparable fake alligator data set, this package may be of use to you if you would like to practice mutating new columns, running simple analyses, plotting data, and clustering geographic data using machine learning. If you do not have your own fake alligator data set, you're in luck! I have provided one that you are welcome to use, but please remember while this fake data set is intended to be comparable to my own real thesis data, I totally made this stuff up!
 

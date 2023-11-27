@@ -14,7 +14,7 @@
 
 
 
-plot_LLRatio_by_class <- function(data, x_axis, y_axis, binwidth) {
+Cleveland_plot <- function(data, x_axis, y_axis, binwidth) {
   
   if (!is.numeric(data[[y_axis]])) {
     stop("Error: Leukocyte/Length Ratio data must be numeric.")
@@ -40,7 +40,7 @@ plot_LLRatio_by_class <- function(data, x_axis, y_axis, binwidth) {
 
 
 ##run and print
-#cleveland_plot <- plot_LLRatio_by_class(alligators_reclassify, "NewClass", "L_L_Ratio", 0.0050)
-#print(cleveland_plot)
+#plot <- Cleveland_plot(alligators_reclassify, "NewClass", "L_L_Ratio", 0.0050)
+#print(plot)
 
 

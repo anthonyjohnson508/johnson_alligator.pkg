@@ -12,7 +12,7 @@
 #'
 
 
-calc_length_leukocyte_ratio <- function(data, column_a, column_b) {
+calc_LL_ratio <- function(data, column_a, column_b) {
   LLratio_calculation <- data[[column_a]] / data[[column_b]]
   
   if (any(!is.finite(LLratio_calculation))) {
@@ -28,6 +28,6 @@ calc_length_leukocyte_ratio <- function(data, column_a, column_b) {
 
 
 ##Run and test function
-#alligators_reclassify <- calc_length_leukocyte_ratio(alligators_reclassify, "H_L_Ratio", "TL")
+#alligators_reclassify <- calc_LL_ratio(alligators_reclassify, "H_L_Ratio", "TL")
 #head(alligators_reclassify)
 

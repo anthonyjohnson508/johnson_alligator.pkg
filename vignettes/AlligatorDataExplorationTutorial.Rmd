@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Thanks for checking out the johnson_alligator.pkg, an R package created for the GBIO 508 course at Southeastern Louisiana University. This package was originally designed for a fake alligator data set, this package provides a versatile set of functions for data manipulation, transformation, analysis, and visualization. Follow the tutorial below to see how it works!
+Thanks for checking out the johnson.pkg, an R package created for the GBIO 508 course at Southeastern Louisiana University. This package was originally designed for a fake alligator data set, this package provides a versatile set of functions for data manipulation, transformation, analysis, and visualization. Follow the tutorial below to see how it works!
 
 
 Lets start by downloading the data.
@@ -22,7 +22,7 @@ alligators <- read_sheet("https://docs.google.com/spreadsheets/d/1hNHAhO4OhXzpw6
 ```
 
 
-Lets download the package as well.
+Now lets download the package as well.
 
 ```{r}
 #Install the package from git hub
@@ -48,5 +48,84 @@ library(knitr)
 ```
 
 
+Alright this package has six unique functions that help us learn about the data. Make sure to check out the README.md file associated with this package for more detailed description of each function. Lets begin with the first function which helps clean up the data set and makes it more usable for future functions. 
+
+
+
+
+Function 1: Reclassify
+Brief Description: The "reclassify" function was created to clean the data set by updating the classification of alligators from three size classes to four (hatching, juvenile, sub adult, and adult) based on total length measurements. This update aligns better with current practices among biologists. The function adds a new column, "NewClass," to store the updated classification for future analysis. 
+
+
+```{r}
+
+#head(alligators)
+alligators_reclassify <- reclassify(alligators, column_name = "TL")
+#head(alligators_reclassify)
+
+```
+
+
+Function 2: Calculating the Leukocyte to Length Ratio
+Brief Description: The "calc_LL_ratio" function transforms data by using a mathematical equation. This function works by dividing the values in the H:L ratio column (column_a) by the total length values (column_b). The result is stored in a new column named "L_L_Ratio". Although it holds limited ecological significance for alligator biologists we will analyze this data later for fun!
+
+
+```{r}
+
+alligators_reclassify <- calc_LL_ratio(alligators_reclassify, "H_L_Ratio", "TL")
+#head(alligators_reclassify)
+
+
+```
+
+
+Function 3: ANOVA Comparing H:L Ratio by Class
+Brief Description: The "aov_HLclass" function is an extension of the "reclassify" function, in that it is designed for statistical analysis using a simple ANOVA based on categories that were previously created using "reclassify". It assesses the relationship between the newly created classes and the H:L ratio. The output of this function is an ANOVA summary table that we can use to better understand our data. 
+
+
+```{r}
+
+aov_HLclass(alligators_reclassify)
+
+```
+
+
+Function 4: Cleveland Plot Comparing Alligator Size Class and Leukocyte:Length Ratio
+Brief Description: The "Cleveland_plot" function, draws on the "reclassify" and the "calc_LL_ratio" function, and is designed for data visualization. It creates a visual comparison of the relationship between L:L ratio and size class. To use the function, users need to assign the "NewClass" column to the x-axis and the "L_L_Ratio" column to the y-axis. Additionally, setting a binwidth, with a suggested starting value of "0.0050," for the function to work!
+
+
+```{r}
+
+plot <- Cleveland_plot(alligators_reclassify, "NewClass", "L_L_Ratio", 0.0050)
+print(plot)
+
+```
+
+
+Function 5: K-means Clustering to Create Spatial Groups
+Brief Description: Using machine learning the "Geo_Kluster" function creates functional groups based on the geographic location of each alligator. Essentially it builds groups of neighbors for subsequent analysis of spatial effects. Users define the number of clusters that they wish (k = "number of groups wanted"). This function outputs four new columns: "cluster" for unique cluster identification, "Gators_Per_Group" indicating the number of alligators in each group, and "center_lat" and "center_long" representing the geographic centers of the cluster groups which could be used in future mapping. 
+
+
+```{r}
+
+alligators_reclassify <- Geo_kluster(alligators_reclassify, lat_column = "Lat", long_column = "Long", k = 10)
+#print(alligators_reclassify)
+
+```
+
+
+Function 6: Plot Comparing H:L Ratio to Cluster Groups
+Brief Description: The "clusterbox" function is designed for visualizing the relationship between space use and stress, using H:L ratio as a stress proxy. It creates a box plot with overlaid jitter points to compare spatial groups ("cluster" created with Geo_Kluster) based on their stress levels. Users need to specify the appropriate columns for axis settings (x_column = "cluster", y_column = "H_L_Ratio").
+
+```{r}
+
+clusterboxplot <- clusterbox(alligators_reclassify, x_column = "cluster", y_column = "H_L_Ratio",
+    ylab_text = "H/L Ratio", xlab_text = "K-means Cluster Group")
+#print(clusterboxplot)
+
+```
+
+
+Congratulations! You now know a little bit of something about fake alligators, you are on your way to become a great biologist, keep up the good work!
 
 

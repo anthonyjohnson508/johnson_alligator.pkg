@@ -9,7 +9,7 @@
 #'
 
 
-ANOVA_HL_Class <- function(data) {
+aov_HLclass <- function(data) {
   # Check if 'H_L_Ratio' is numeric
   if (!is.numeric(data$H_L_Ratio)) {
     stop("ANOVA requires a numeric response variable.")
@@ -32,5 +32,5 @@ ANOVA_HL_Class <- function(data) {
 
 
 ##Run the function 
-#ANOVA_HL_Class(alligators_reclassify)
+#aov_HLclass(alligators_reclassify)
 

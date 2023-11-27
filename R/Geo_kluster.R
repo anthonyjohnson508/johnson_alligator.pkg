@@ -16,7 +16,7 @@
 
 #library(dplyr)
 
-cluster_data <- function(data, lat_column, long_column, k) {
+Geo_kluster <- function(data, lat_column, long_column, k) {
   
   if (any(grepl("-", data[[lat_column]]))) {
     warning("You may have mixed your lat and long columns. '-' symbols found in the latitude column.")
@@ -40,6 +40,6 @@ cluster_data <- function(data, lat_column, long_column, k) {
 
 
 ##test and print
-#alligators_reclassify <- cluster_data(alligators_reclassify, lat_column = "Lat", long_column = "Long", k = 10) #works
-#Checkifstatement<- cluster_data(alligators_reclassify, lat_column = "Long", long_column = "Lat", k = 10) #busted, purposefully switched lat and long
+#alligators_reclassify <- Geo_kluster(alligators_reclassify, lat_column = "Lat", long_column = "Long", k = 10) #works
+#Checkifstatement<- Geo_kluster(alligators_reclassify, lat_column = "Long", long_column = "Lat", k = 10) #busted, purposefully switched lat and long
 #print(alligators_reclassify)

@@ -20,7 +20,7 @@
 
 #library(ggplot2)
 
-plot_box_by_cluster <- function(data, x_column, y_column, ylab_text, xlab_text) {
+clusterbox <- function(data, x_column, y_column, ylab_text, xlab_text) {
   
   if (!is.numeric(data[[y_column]])) {
     stop("Error: Heterophil:Lympocyte Ratio data must be numeric.")
@@ -48,11 +48,11 @@ plot_box_by_cluster <- function(data, x_column, y_column, ylab_text, xlab_text) 
 
 
 # Test
-#box_cleveland_plot <- plot_box_by_cluster(alligators_reclassify, x_column = "cluster", y_column = "H_L_Ratio",
+#clusterboxplot <- clusterbox(alligators_reclassify, x_column = "cluster", y_column = "H_L_Ratio",
 #    ylab_text = "H/L Ratio", xlab_text = "K-means Cluster Group")
 
 # Print 
-#print(box_cleveland_plot)
+#print(clusterboxplot)
 
 
 

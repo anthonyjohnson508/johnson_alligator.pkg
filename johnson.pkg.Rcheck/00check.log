@@ -56,46 +56,37 @@ Package in Depends field not imported from: ‘ggplot2’
 * checking replacement functions ... OK
 * checking foreign function calls ... OK
 * checking R code for possible problems ... NOTE
-ANOVA_HL_Class: no visible global function definition for ‘aov’
-cluster_data: no visible global function definition for ‘kmeans’
-cluster_data: no visible global function definition for ‘%>%’
-cluster_data: no visible global function definition for ‘group_by’
-cluster_data: no visible binding for global variable ‘cluster’
-cluster_data: no visible global function definition for ‘summarise’
-cluster_data: no visible global function definition for ‘n_distinct’
-cluster_data: no visible binding for global variable ‘Unique_ID’
-cluster_data: no visible binding for global variable ‘.data’
-cluster_data: no visible global function definition for ‘left_join’
-cluster_data: no visible binding for global variable ‘.’
-plot_LLRatio_by_class: no visible global function definition for
-  ‘ggplot’
-plot_LLRatio_by_class: no visible global function definition for
-  ‘aes_string’
-plot_LLRatio_by_class: no visible global function definition for
+Cleveland_plot: no visible global function definition for ‘ggplot’
+Cleveland_plot: no visible global function definition for ‘aes_string’
+Cleveland_plot: no visible global function definition for
   ‘geom_dotplot’
-plot_LLRatio_by_class: no visible global function definition for ‘ylab’
-plot_LLRatio_by_class: no visible global function definition for ‘xlab’
-plot_LLRatio_by_class: no visible global function definition for
-  ‘ggtitle’
-plot_box_by_cluster: no visible global function definition for ‘ggplot’
-plot_box_by_cluster: no visible global function definition for
-  ‘aes_string’
-plot_box_by_cluster: no visible global function definition for
-  ‘geom_boxplot’
-plot_box_by_cluster: no visible global function definition for
-  ‘geom_jitter’
-plot_box_by_cluster: no visible global function definition for ‘aes’
-plot_box_by_cluster: no visible binding for global variable ‘cluster’
-plot_box_by_cluster: no visible global function definition for ‘ylab’
-plot_box_by_cluster: no visible global function definition for ‘xlab’
-plot_box_by_cluster: no visible global function definition for
-  ‘ggtitle’
-plot_box_by_cluster: no visible global function definition for
-  ‘theme_classic’
-plot_box_by_cluster: no visible global function definition for ‘theme’
-plot_box_by_cluster: no visible global function definition for
-  ‘element_blank’
-plot_box_by_cluster: no visible global function definition for
+Cleveland_plot: no visible global function definition for ‘ylab’
+Cleveland_plot: no visible global function definition for ‘xlab’
+Cleveland_plot: no visible global function definition for ‘ggtitle’
+Geo_kluster: no visible global function definition for ‘kmeans’
+Geo_kluster: no visible global function definition for ‘%>%’
+Geo_kluster: no visible global function definition for ‘group_by’
+Geo_kluster: no visible binding for global variable ‘cluster’
+Geo_kluster: no visible global function definition for ‘summarise’
+Geo_kluster: no visible global function definition for ‘n_distinct’
+Geo_kluster: no visible binding for global variable ‘Unique_ID’
+Geo_kluster: no visible binding for global variable ‘.data’
+Geo_kluster: no visible global function definition for ‘left_join’
+Geo_kluster: no visible binding for global variable ‘.’
+aov_HLclass: no visible global function definition for ‘aov’
+clusterbox: no visible global function definition for ‘ggplot’
+clusterbox: no visible global function definition for ‘aes_string’
+clusterbox: no visible global function definition for ‘geom_boxplot’
+clusterbox: no visible global function definition for ‘geom_jitter’
+clusterbox: no visible global function definition for ‘aes’
+clusterbox: no visible binding for global variable ‘cluster’
+clusterbox: no visible global function definition for ‘ylab’
+clusterbox: no visible global function definition for ‘xlab’
+clusterbox: no visible global function definition for ‘ggtitle’
+clusterbox: no visible global function definition for ‘theme_classic’
+clusterbox: no visible global function definition for ‘theme’
+clusterbox: no visible global function definition for ‘element_blank’
+clusterbox: no visible global function definition for
   ‘scale_color_discrete’
 reclassify: no visible global function definition for ‘%>%’
 reclassify: no visible global function definition for ‘mutate’
@@ -117,9 +108,9 @@ to your NAMESPACE file.
 * checking for missing documentation entries ... OK
 * checking for code/documentation mismatches ... OK
 * checking Rd \usage sections ... WARNING
-Undocumented arguments in documentation object 'cluster_data'
+Undocumented arguments in documentation object 'Geo_kluster'
   ‘k’
-Documented arguments not in \usage in documentation object 'cluster_data':
+Documented arguments not in \usage in documentation object 'Geo_kluster':
   ‘K’
 
 Documented arguments not in \usage in documentation object 'reclassify':
