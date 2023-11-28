@@ -14,7 +14,7 @@ Thanks for checking out the johnson.pkg, an R package created for the GBIO 508 c
 
 Lets start by downloading the data.
 
-```{r, eval=FALSE}
+```{r}
 #install.packages("googlesheets4)
 library(googlesheets4)
 googlesheets4::gs4_deauth()
@@ -28,7 +28,7 @@ Now lets download the package as well.
 #Install the package from git hub
 
 devtools::install_github("anthonyjohnson508/johnson_alligator.pkg")
-
+library(johnson.pkg)
 
 ```
 
@@ -36,9 +36,9 @@ Go ahead an install and load these packages before we begin.
 
 ```{r}
 
-install.packages("tidyverse")
-install.packages("broom")
-install.packages("knitr")
+#install.packages("tidyverse")
+#install.packages("broom")
+#install.packages("knitr")
 
 
 library(tidyverse) 
