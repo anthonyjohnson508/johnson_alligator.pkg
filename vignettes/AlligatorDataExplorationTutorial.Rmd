@@ -131,7 +131,7 @@ Brief Description: The "clusterbox" function is designed for visualizing the rel
 
 clusterboxplot <- clusterbox(alligators_reclassify, x_column = "cluster", y_column = "H_L_Ratio",
     ylab_text = "H/L Ratio", xlab_text = "K-means Cluster Group")
-#print(clusterboxplot)
+print(clusterboxplot)
 
 ```
 
