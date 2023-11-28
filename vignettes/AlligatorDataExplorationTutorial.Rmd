@@ -12,6 +12,27 @@ knitr::opts_chunk$set(echo = TRUE)
 Thanks for checking out the johnson.pkg, an R package created for the GBIO 508 course at Southeastern Louisiana University. This package was originally designed for a fake alligator data set, this package provides a versatile set of functions for data manipulation, transformation, analysis, and visualization. Follow the tutorial below to see how it works!
 
 
+You may need to install these packages if you have not already.
+
+```{r}
+
+#install.packages("tidyverse")
+#install.packages("broom")
+#install.packages("knitr")
+#install.packages("devtools")
+```
+
+And load them
+```{r}
+library(tidyverse) 
+library(broom)
+library(knitr)
+library(devtools)
+```
+
+
+
+
 Lets start by downloading the data.
 
 ```{r}
@@ -20,6 +41,8 @@ library(googlesheets4)
 googlesheets4::gs4_deauth()
 alligators <- read_sheet("https://docs.google.com/spreadsheets/d/1hNHAhO4OhXzpw6LG0WN_AZxaEUiyDhairunCXgpVLqM/edit?usp=sharing")
 ```
+
+
 
 
 Now lets download the package as well.
@@ -32,20 +55,7 @@ library(johnson.pkg)
 
 ```
 
-Go ahead an install and load these packages before we begin.
 
-```{r}
-
-#install.packages("tidyverse")
-#install.packages("broom")
-#install.packages("knitr")
-
-
-library(tidyverse) 
-library(broom)
-library(knitr)
-
-```
 
 
 Alright this package has six unique functions that help us learn about the data. Make sure to check out the README.md file associated with this package for more detailed description of each function. Lets begin with the first function which helps clean up the data set and makes it more usable for future functions. 
